@@ -50,6 +50,48 @@
         </div>
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/coreapi@latest/dist/coreapi.js"></script>
+    <script>
+        let settings = {
+            async: true,
+            crossDomain: true,
+            url: "https://cors-anywhere.herokuapp.com/https://nigeria-covid-19.p.rapidapi.com/api/states",
+            method: "GET",
+            headers: {
+                "x-rapidapi-host": "nigeria-covid-19.p.rapidapi.com",
+                "x-rapidapi-key": "125fed27d4msh77f960416e3a340p11b4edjsn65a7e81213e2"
+            }
+        };
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            return response;
+        });
+        // var coreapi = window.coreapi // Loaded by `coreapi.js`
+        // var schema = window.schema // Loaded by `schema.js`
+        var coreapi = window.coreapi;
+
+        // Initialize a client
+        // var client = new coreapi.Client()
+
+        // // Interact with the API endpoint
+        // let schema = client.get("https://covid9ja.herokuapp.com/");
+        // var action = ["confirmed", "read"]
+        // client.action(schema, action).then(function (result) {
+        //     // Return value is in 'result'
+        //     console.log(result)
+        // })
+
+        // client.get("https://covid9ja.herokuapp.com/")
+        //     .then(function (data) {
+        //         var responseElement = document.getElementById("response");
+        //         console.log(data)
+        //         responseElement.innerText = data;
+        //     })
+        //     .catch(function (error) {
+        //         console.log("ERROR: ", error);
+        //     });
+    </script>
 </body>
 
 </html>
